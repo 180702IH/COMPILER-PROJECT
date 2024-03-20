@@ -1,0 +1,137 @@
+Test case : 1
+inputtxt: 
+babbbbabbbabbbaaabba
+(((((a)(b))|((b)(a)))(((a)|(b))?))+)
+((((a)(a))+)(b))
+(((a)(((a)|(b))*))((b)(a)))
+
+output.txt:
+<bab,1><b,0><b,0><bab,1><b,0><bab,1><b,0><baaabba,1>
+
+Test case 2: 
+input.txt: 
+abababaabaaaabaaaaab
+((a)((((a)(b))*)(b)))  
+((((a)(a))+)(b))
+((((a)(b))*)((a)?))
+
+output.txt: 
+<abababa,3><aba,3><a,3><aab,2><a,3><aaaab,2>
+
+Test case 3: 
+input.txt: 
+aababababbbbababbaba
+(((a)(((a)(b))?))(b))
+((((a)(a))+)(b))
+(((((a)(b))|((b)(a)))(((a)|(b))?))+)
+
+output.txt: 
+<aab,2><abababb,3><b,0><bababbaba,3>
+
+Test case 4: 
+input.txt: 
+abbaabaabbaabbbbaa
+(((((a)*)(b))(((a)*)((b)((a)*))))*)
+(((a)+)((b)|((((b)+)(a))?)))
+
+output.txt: 
+<abbaabaabbaabbb,1><b,0><aa,2>
+
+
+Test case 5: 
+input.txt: 
+bbbaabababababbabababab
+(((((a)*)(b))(((a)?)((b)((a)?))))?)
+(((a)+)((b)|((((b)+)(a))?)))
+(((((a)(b))*)(a)?))
+(((a)(((a)|(b))*))((b)(a)))
+
+output.txt: 
+<bb,1><b,0><aabababababbabababa,4><b,0>
+
+
+Example 1:
+input.txt
+abbaababaaabbaa
+(((a)*)(b))
+((b)(a))
+
+output.txt
+<ab,1><ba,2><ab,1><ab,1><aaab,1><ba,2><a,0>
+
+
+Example 2: 
+input.txt
+baabaababbababaaaabbbababa
+((((b)|((a)(b)))+)|((((b)|((a)(b)))*)(a)))
+((((a)(a))+)(b))
+(((b)(((a)(a))?))(b))
+
+output.txt
+<baab,3><aab,2><abbababa,1><a,1><aab,2><bbababa,1>
+Here are seven additional test cases:
+
+Test case 6:
+input.txt:
+abababababa
+(((a)(b))+)
+(((a)(b))*)
+
+output.txt:
+<ab,3><ab,3><ab,3><a,0><a,0>
+
+Test case 7:
+input.txt:
+babababbabababab
+(((((a)*)(b))((a)((b)*)))+)
+((((b)*)(a)(b)))
+
+output.txt:
+<babababbabababab,2><a,0><a,0><a,0>
+
+Test case 8:
+input.txt:
+aaaaababaaaabaaa
+(((a)(b))*)+
+((a)(a))?
+
+output.txt:
+<aaaaababaaaabaaa,4><aa,0><aa,0><a,0>
+
+Test case 9:
+input.txt:
+abababbbababbaa
+(((a)(b))*)((a)(a))?
+(((a)(a))*)
+
+output.txt:
+<abababbababba,2><a,0><a,0>
+
+Test case 10:
+input.txt:
+abbabbabbabbabb
+(((a)((b)(a))))+
+(((b)((a)(b)))*)
+
+output.txt:
+<abb,1><abb,1><abb,1><abb,1>
+
+Test case 11:
+input.txt:
+ababababbabbab
+(((a)(b))*)((a)(a))?+
+((a)((b)(a)))*
+
+output.txt:
+<ababababbabbab,1><a,0>
+
+Test case 12:
+input.txt:
+aaaaaabbbabaaaaa
+((a)(((a)(b))*)((a)(b)))+
+(((a)(a))*)((b)(a))?
+
+output.txt:
+<aaaaaabbbabaaaaa,2><aaaaa,0><a,0><a,0>
+
+These test cases should help validate the functionality and correctness of your program.
